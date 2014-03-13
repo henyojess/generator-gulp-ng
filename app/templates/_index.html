@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title><%= _.slugify(appname) %></title>    
+    <link href="lib.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body ng-app="<%= _.slugify(appname) %>">
+    <div class="container" ng-view=""></div>
+    <script src="lib.js"></script>
+    <script src="templates.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

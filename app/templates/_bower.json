@@ -1,0 +1,22 @@
+{
+  "name": "<%= _.slugify(appname) %>",
+  "main": "app.js",
+  "version": "0.0.0",
+  "authors": [
+    "jessie <jessie@apollo.com.ph>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.14",
+    "angular-route": "~1.2.14"
+  }
+}
+
