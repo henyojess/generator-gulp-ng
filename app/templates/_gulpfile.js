@@ -57,7 +57,7 @@ gulp.task('watch',function(){
     gulp.watch('./app/**/*.js',['scripts']);
     gulp.watch(['!./app/index.html','./app/**/*.html'],['templates']);
     gulp.watch('./app/**/*.css',['css']);
-    gulp.watch('./app/index.html',['copy']);
+    gulp.watch('./app/index.html',['copy-index']);
 
 });
 
