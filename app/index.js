@@ -36,20 +36,20 @@ var GulpNgGenerator = yeoman.generators.Base.extend({
 
   app: function () {
     this.mkdir('app');
-    this.copy('_app.css', 'app/app.css');
-    this.copy('_app.js','app/app.js');
-    this.copy('_app_controller.js','app/app_controller.js');
-    this.copy('_app_controller_test.js','app/app_controller_test.js');
-    this.copy('_index.html','app/index.html');
+    this.copy('app/_app.css', 'app/app.css');
+    this.copy('app/_app.js','app/app.js');
+    this.copy('app/_app_controller.js','app/app_controller.js');
+    this.copy('app/_app_controller_test.js','app/app_controller_test.js');
+    this.copy('app/_index.html','app/index.html');
 
     this.mkdir('app/components');
-    this.copy('components/_app_service.js', 'app/components/app_service.js');
-    this.copy('components/_app_service_test.js', 'app/components/app_service_test.js');
+    this.copy('app/components/_app_service.js', 'app/components/app_service.js');
+    this.copy('app/components/_app_service_test.js', 'app/components/app_service_test.js');
 
     this.mkdir('app/main');
-    this.copy('main/_main.html', 'app/main/main.html');
-    this.copy('main/_main_controller.js', 'app/main/main_controller.js');
-    this.copy('main/_main_controller_test.js', 'app/main/main_controller_test.js');
+    this.copy('app/main/_main.html', 'app/main/main.html');
+    this.copy('app/main/_main_controller.js', 'app/main/main_controller.js');
+    this.copy('app/main/_main_controller_test.js', 'app/main/main_controller_test.js');
   },
 
   projectfiles: function () {    
@@ -57,6 +57,7 @@ var GulpNgGenerator = yeoman.generators.Base.extend({
     this.copy('_bower.json', 'bower.json');    
     this.copy('_gulpfile.js', 'gulpfile.js');
     this.copy('_package.json', 'package.json');
+    this.copy('_karma-unit.js', 'karma-unit.js');
   }
 });
 
