@@ -25,13 +25,13 @@ It takes advantage of the gulp build tool and makes use of bower and npm for dep
     .gitignore
     README.md
     bower.json
-    gulpgile.js
+    gulpfile.js
     karma-unit.js
     package.json
 
 -----
 
-#### FEAUTURES ####
+#### FEATURES ####
 - follows the recommended best practice project structure for angularjs
 - all js files in the app folder are concatenated into build/app.js
 - all html files in the app folder except index.html are concatenated and compiled into a js file:build/templates.js and loaded into the angular templateCache
