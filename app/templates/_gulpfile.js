@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gulpBowerFiles = require('gulp-bower-files');
 var plugins = require("gulp-load-plugins")({lazy:false});
 
 gulp.task('scripts', function(){
@@ -26,8 +27,7 @@ gulp.task('css', function(){
 
 gulp.task('vendorJS', function(){
     //concatenate vendor JS files
-    gulp.src(['!./bower_components/**/*.min.js',
-        './bower_components/**/*.js'])
+    gulpBowerFiles({includeDev: true})
         .pipe(plugins.concat('lib.js'))
         .pipe(gulp.dest('./build'));
 });
