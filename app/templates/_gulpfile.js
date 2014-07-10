@@ -41,15 +41,15 @@ gulp.task('vendorCSS', function(){
 });
 
 gulp.task('copy-index', function() {
-    gulp.src('./app/index.html')    
+    gulp.src('./app/index.html')
         .pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch',function(){
     gulp.watch([
-        'build/**/*.html',        
+        'build/**/*.html',
         'build/**/*.js',
-        'build/**/*.css'        
+        'build/**/*.css'
     ], function(event) {
         return gulp.src(event.path)
             .pipe(plugins.connect.reload());
@@ -61,10 +61,12 @@ gulp.task('watch',function(){
 
 });
 
-gulp.task('connect', plugins.connect.server({
-    root: ['build'],
-    port: 9000,
-    livereload: true
-}));
+gulp.task('connect', function() {
+  plugins.connect.server({
+    root: 'build',
+    livereload: true,
+    port: 9000
+  });
+});
 
 gulp.task('default',['connect','scripts','templates','css','copy-index','vendorJS','vendorCSS','watch']);
