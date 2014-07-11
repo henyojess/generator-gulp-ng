@@ -7,10 +7,10 @@
     "gulp-concat": "~2.3",
     "gulp-jshint": "~1.7",
     "gulp-load-plugins": "~0.5",
-    "gulp-angular-templatecache": "^1.2.1",
-    "gulp-connect": "~2.0.6",
-    "karma": "^0.12.16",
-    "karma-jasmine": "^0.1.5",
-    "karma-chrome-launcher": "^0.1.4"
+    "gulp-angular-templatecache": "~1.2",
+    "gulp-webserver": "~0.3",
+    "karma": "~0.12",
+    "karma-jasmine": "~0.1",
+    "karma-chrome-launcher": "~0.1"
   }
 }
