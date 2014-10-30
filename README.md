@@ -55,7 +55,7 @@ It takes advantage of the gulp build tool and makes use of bower and npm for dep
 -----
 
 #### USAGE ####
-1) npm install -g generator-gulp-ng
+1) npm install -g generator-gulp-ng; npm install -g gulp; npm install -g karma-cli
 
 2) mkdir myApp && cd myApp && yo gulp-ng
 

@@ -41,19 +41,11 @@ gulp.task('vendorCSS', function(){
 });
 
 gulp.task('copy-index', function() {
-    gulp.src('./app/index.html')    
+    gulp.src('./app/index.html')
         .pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch',function(){
-    gulp.watch([
-        'build/**/*.html',        
-        'build/**/*.js',
-        'build/**/*.css'        
-    ], function(event) {
-        return gulp.src(event.path)
-            .pipe(plugins.connect.reload());
-    });
     gulp.watch(['./app/**/*.js','!./app/**/*test.js'],['scripts']);
     gulp.watch(['!./app/index.html','./app/**/*.html'],['templates']);
     gulp.watch('./app/**/*.css',['css']);
@@ -61,10 +53,12 @@ gulp.task('watch',function(){
 
 });
 
-gulp.task('connect', plugins.connect.server({
-    root: ['build'],
-    port: 9000,
-    livereload: true
-}));
+gulp.task('webserver', function() {
+  gulp.src('build')
+    .pipe(plugins.webserver({
+      port: 9000,
+      livereload: true
+    }));
+});
 
-gulp.task('default',['connect','scripts','templates','css','copy-index','vendorJS','vendorCSS','watch']);
+gulp.task('default',['scripts','templates','css','copy-index','vendorJS','vendorCSS','watch','webserver']);
